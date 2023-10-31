@@ -22,7 +22,7 @@ const RoleListing = (props: RoleData) => {
   const staffId = useContext(AuthContext);
   const [roleInfo, setRoleInfo] = React.useState(props.data);
   const [skillInfo, setSkillInfo] = React.useState<SkillInfo | undefined>();
-  console.log(staffId, roleInfo.roleid);
+  // console.log(staffId, roleInfo.roleid);
   const fetchRoleSkillMatch = () => {
     fetch(`/api/staff/role-skills-match/${staffId}/${roleInfo.roleid}`, {
       method: "GET",
